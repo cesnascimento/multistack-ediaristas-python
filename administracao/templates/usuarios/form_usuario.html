@@ -9,29 +9,36 @@
   <div class="card-body">
     <form method="POST">
       {% csrf_token %}
-      <div class="form-group">
-        {% bootstrap_field form_usuario.username %}
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            {% bootstrap_field form_usuario.password1 %}
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            {% bootstrap_field form_usuario.password2 %}
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        {% bootstrap_field form_usuario.first_name %}
-      </div>
-      <div class="form-group">
-        {% bootstrap_field form_usuario.email %}
-      </div>
+      {% bootstrap_form form_usuario %}
       <button class="btn btn-primary" type="submit">Salvar</button>
     </form>
   </div>
 </div>
 {% endblock content %}
+
+<!-- <div class="form-group">
+  {# Renderiza o campo 'username' do formulário 'form_usuario' usando o Bootstrap #}
+  {% bootstrap_field form_usuario.username %}
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      {# Renderiza o campo 'password1' do formulário 'form_usuario' usando o Bootstrap #}
+      {% bootstrap_field form_usuario.password1 %}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      {# Renderiza o campo 'password2' do formulário 'form_usuario' usando o Bootstrap #}
+      {% bootstrap_field form_usuario.password2 %}
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  {# Renderiza o campo 'first_name' do formulário 'form_usuario' usando o Bootstrap #}
+  {% bootstrap_field form_usuario.first_name %}
+</div>
+<div class="form-group">
+  {# Renderiza o campo 'email' do formulário 'form_usuario' usando o Bootstrap #}
+  {% bootstrap_field form_usuario.email %}
+</div> -->
